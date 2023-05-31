@@ -6,6 +6,7 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.Canvas
 import androidx.compose.foundation.Image
+import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.material.MaterialTheme
@@ -36,17 +37,20 @@ class MainActivity : ComponentActivity() {
 
 @Composable
 fun Greeting(name: String) {
-    Text(text = "作者: $name")
-//    Image(
-//
-//        painter = painterResource(id = R.drawable.map),
-//
-//        contentDescription = "地圖",
-//
-//        alpha = 0.7f,
-//
-//        modifier = Modifier
-//    )
+    Column() {
+        Text(text = "作者: $name")
+        Image(
+
+            painter = painterResource(id = R.drawable.map),
+
+            contentDescription = "地圖",
+
+            alpha = 0.7f,
+
+            modifier = Modifier
+        )
+    }
+
 
 //    Box(
 //
